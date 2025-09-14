@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api"; // backend base URL
+const API_URL = "https://videoproctoring-system.onrender.com/api"; // backend base URL
 
 // Get token from localStorage
 const getToken = () => localStorage.getItem("token");
