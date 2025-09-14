@@ -28,7 +28,7 @@ export const login = async (data) => {
   return res.json();
 };
 
-// api.js
+// Start Session
 export const startSession = async () => {
   const res = await fetch(`${API_URL}/sessions/start`, {
     method: "POST",

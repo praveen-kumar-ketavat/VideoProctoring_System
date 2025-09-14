@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { signup } from "../services/api";
-import "./Auth.css"; // ✅ reuse the same CSS as Login
+import "./Auth.css";
 
 function Signup() {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
@@ -13,7 +13,7 @@ function Signup() {
     const res = await signup(form);
 
     if (res.message) {
-      navigate("/"); // ✅ redirect to login
+      navigate("/");
     } else {
       setError(res.error || "Signup failed");
     }

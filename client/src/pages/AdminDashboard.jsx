@@ -23,7 +23,7 @@ function AdminDashboard() {
   }, []);
 
   const openSession = (sessionId) => {
-    navigate(`/reports/${sessionId}`); // ✅ go to reports page
+    navigate(`/reports/${sessionId}`);
   };
 
   return (

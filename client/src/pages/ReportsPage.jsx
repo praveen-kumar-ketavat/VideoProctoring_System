@@ -37,7 +37,7 @@ function ReportsPage() {
   });
   if (score < 0) score = 0;
 
-  // ✅ Generate PDF
+  // Generate PDF
   const downloadPDF = () => {
   const doc = new jsPDF();
 

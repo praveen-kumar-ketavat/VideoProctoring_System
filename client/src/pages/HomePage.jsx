@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function HomePage() {
   return (
     <div style={{ textAlign: "center", marginTop: "4rem" }}>
-      <h1>👩‍💻 Focus & Object Detection Interview System</h1>
+      <h1>👩‍💻 Video Detection Interview System</h1>
       <p>Please login or signup to continue.</p>
 
       <div style={{ marginTop: "2rem" }}>
