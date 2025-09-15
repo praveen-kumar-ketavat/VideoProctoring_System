@@ -9,10 +9,6 @@ import sessionRoutes from "./routes/sessionRoutes.js";
 import violationRoutes from "./routes/violationRoutes.js";
 import authMiddleware from "./middleware/authMiddleware.js";
 
-import path from "path";
-import { fileURLToPath } from "url";
-
-
 dotenv.config();
 
 const app = express();
@@ -43,19 +39,6 @@ mongoose
 app.use("/api/auth", authRoutes);
 app.use("/api/sessions", sessionRoutes);
 app.use("/api/violations", violationRoutes);
-
-// ✅ Get current directory
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// ✅ Serve frontend in production
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../client/dist")));
-
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/dist/index.html"));
-  });
-}
 
 
 // Start server
